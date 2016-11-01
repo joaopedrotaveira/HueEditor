@@ -1,0 +1,119 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
+<link rel="import" href="/bower_components/paper-material/paper-material.html">
+<link rel="import" href="/bower_components/paper-checkbox/paper-checkbox.html">
+<!--
+`HueEditor-element`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="HueEditor-scene">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      paper-checkbox.cbLights {
+        width: 30%;
+      }
+      paper-material {
+        margin: 1em;
+        padding: 1em;
+      }
+      .flex-horizontal {
+        @apply(--layout-horizontal);
+      }
+      .flexchild {
+        @apply(--layout-flex);
+      }
+      .opacity50 { opacity: 0.1; }
+    </style>
+    <paper-material>
+      <div class="container flex-horizontal">
+        <paper-input label="Scene Name" value="{{scene.name}}" class="flexchild"></paper-input>
+        <iron-icon id="isLocked" icon="https"></iron-icon>
+      </div>
+      
+      <div>
+        <template is="dom-repeat" items="[[lights]]">
+          <paper-checkbox class="cbLights" light-id="[[item.id]]">[[item.name]]</paper-checkbox>
+        </template>
+      </div>
+
+      <div>
+        <paper-icon-button icon="launch" title="Apply" on-tap="tapApply"></paper-icon-button>
+        <paper-icon-button icon="delete" title="Delete" on-tap="tapDelete"></paper-icon-button>
+        <paper-icon-button icon="save" title="Save" on-tap="tapSave"></paper-icon-button>
+      </div>
+    </paper-material>
+
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'HueEditor-scene',
+      myScene: {},
+
+      properties: {
+        scene: {
+          type: Object,
+          observer: '_sceneChanged'
+        }
+      },
+
+      _sceneChanged: function(newValue, oldValue) {
+        this.setSelectedLights(newValue.lights);
+        if (newValue.locked) {
+          this.$.isLocked.classList.remove('opacity50');
+        } else {
+          this.$.isLocked.classList.add('opacity50');
+        }
+      },
+
+      setSelectedLights: function(lights) {
+        document.querySelectorAll('.cbLights').forEach(function(cb) {
+          if (lights.indexOf(cb.lightId) >= 0) {
+            cb.checked = true;
+          } else  {
+            cb.checked = false;
+          }
+        });
+      },
+
+      tapApply: function() {
+        var url = 'groups/0/action';
+        var body = {
+          scene: this.scene.id
+        };
+        window.sendCommand('PUT', url, body).then(this.waitForFetch);
+      },
+      tapDelete: function() {
+        var url = `scenes/${this.scene.id}`;
+        window.sendCommand('DELETE', url).then(this.waitForFetch);
+      },
+      tapSave: function() {
+        var url = `scenes/${this.scene.id}`;
+        var body = {
+          name: this.scene.name,
+          lights: [],
+          storelightstate: true
+        };
+        document.querySelectorAll('.cbLights').forEach(function(cb) {
+          if (cb.checked === true) {
+            body.lights.push(cb.lightId);
+          }
+        });
+        window.sendCommand('PUT', url, body).then(this.waitForFetch);
+      },
+      waitForFetch: function(response) {
+        console.log('done', response);
+      }
+
+    });
+  </script>
+</dom-module>

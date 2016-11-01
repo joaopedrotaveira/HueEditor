@@ -1,0 +1,151 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
+<link rel="import" href="/bower_components/paper-material/paper-material.html">
+<link rel="import" href="/bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="/bower_components/paper-slider/paper-slider.html">
+<link rel="import" href="/bower_components/paper-toggle-button/paper-toggle-button.html">
+<link rel="import" href="/bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="/bower_components/paper-listbox/paper-listbox.html">
+<!--
+`HueEditor-element`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="HueEditor-light">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      paper-checkbox.cbLights {
+        width: 30%;
+      }
+      paper-material {
+        margin: 1em;
+        padding: 1em;
+      }
+      .flex-horizontal {
+        @apply(--layout-horizontal);
+      }
+      .flexchild {
+        @apply(--layout-flex);
+      }
+      .opacity50 { opacity: 0.1; }
+    </style>
+    <paper-material>
+      <div class="container flex-horizontal">
+        <paper-input label="Light Name" value="{{light.name}}" class="flexchild"></paper-input>
+      </div>
+      <paper-toggle-button checked="{{light.state.on}}"></paper-toggle-button>
+      <paper-slider min="1" max="254" value="{{light.state.bri}}" editable></paper-slider>
+      
+      <paper-dropdown-menu label="Color Mode">
+        <paper-listbox class="dropdown-content" on-iron-select="updateColorPickers" attr-for-selected="val" selected="{{light.state.colormode}}">
+          <paper-item val="xy">XY</paper-item>
+          <paper-item val="ct">CT</paper-item>
+          <paper-item val="hs">Hue</paper-item>
+        </paper-listbox>
+      </paper-dropdown-menu>
+
+      <div hidden$="{{!colorModeHue}}" class="container flex-horizontal">
+        <div>Hue</div><paper-slider min="0" max="65535" value="{{light.state.hue}}" editable class="flexchild"></paper-slider><br>
+        Sat <paper-slider min="0" max="254" value="{{light.state.sat}}" editable class="flexchild"></paper-slider><br>
+      </div>
+      <div hidden$="{{!colorModeCT}}">
+        Color Temp <paper-slider min="153" max="500" value="{{light.state.ct}}" editable></paper-slider><br>
+      </div>
+      <div hidden$="{{!colorModeXY}}" class="container flex-horizontal">
+        <paper-input label="X" value="{{light.state.xy.0}}" class="flexchild"></paper-input>
+        <paper-input label="Y" value="{{light.state.xy.1}}" class="flexchild"></paper-input>
+      </div>
+
+      <paper-dropdown-menu label="Alert">
+        <paper-listbox class="dropdown-content" attr-for-selected="val" selected="{{light.state.alert}}">
+          <paper-item val="none">None</paper-item>
+          <paper-item val="select">Select</paper-item>
+          <paper-item val="lselect">LSelect</paper-item>
+        </paper-listbox>
+      </paper-dropdown-menu>
+
+      <paper-dropdown-menu label="Effect">
+        <paper-listbox class="dropdown-content" attr-for-selected="val" selected="{{light.state.effect}}">
+          <paper-item val="none">None</paper-item>
+          <paper-item val="colorloop">Color Loop</paper-item>
+        </paper-listbox>
+      </paper-dropdown-menu>
+
+      <div>
+        <paper-icon-button icon="launch" title="Apply" on-tap="tapApply"></paper-icon-button>
+        <paper-icon-button icon="delete" title="Delete" on-tap="tapDelete"></paper-icon-button>
+        <paper-icon-button icon="save" title="Save" on-tap="tapSave"></paper-icon-button>
+      </div>
+    </paper-material>
+
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'HueEditor-light',
+      colorModeCT: false,
+      colorModeXY: false,
+      colorModeHue: false,
+
+      properties: {
+        light: {
+          type: Object,
+          observer: '_lightChanged'
+        }
+      },
+
+      _lightChanged: function(newValue, oldValue) {
+        console.log(newValue);
+        this.updateColorPickers();
+      },
+
+      updateColorPickers: function() {
+        console.log('changed', this.light.state.colormode);
+        this.colorModeCT = false;
+        this.colorModeHue = false;
+        this.colorModeXY = false;
+        if (this.light.state.colormode === 'ct') {
+          this.colorModeCT = true;
+        } else if (this.light.state.colormode === 'xy') {
+          this.colorModeXY = true;
+        } else if (this.light.state.colormode === 'hs') {
+          this.colorModeHue = true;
+        }
+      },
+
+      tapApply: function() {
+        var url = `lights/${this.light.id}/state`;
+        var body = {
+          on: this.light.state.on,
+          bri: parseInt(this.light.state.bri, 10),
+          alert: this.light.state.alert,
+          effect: this.light.state.effect
+        };
+        if (this.light.state.colormode === 'ct') {
+          body.ct = parseInt(this.light.state.ct, 10);
+        } else if (this.light.state.colormode === 'hs') {
+          body.hue = parseInt(this.light.state.hue, 10);
+          body.sat = parseInt(this.light.state.sat, 10);
+        } else if (this.light.state.xy) {
+          var x = parseInt(this.light.state.xy[0], 10);
+          var y = parseInt(this.light.state.xy[1], 10);
+          body.xy = [x, y];
+        }
+        console.log(body);
+        window.sendCommand('PUT', url, body).then(this.waitForFetch);
+      },
+      waitForFetch: function(response) {
+        console.log('done', response);
+      }
+
+    });
+  </script>
+</dom-module>

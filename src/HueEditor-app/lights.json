@@ -1,0 +1,509 @@
+[ null, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "Front Hall 1",
+  "state" : {
+    "alert" : "none",
+    "bri" : 200,
+    "colormode" : "xy",
+    "ct" : 500,
+    "effect" : "none",
+    "hue" : 65527,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 253,
+    "xy" : [ 0.6736, 0.3221 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:b4:8b:28-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "Front Hall 2",
+  "state" : {
+    "alert" : "none",
+    "bri" : 200,
+    "colormode" : "xy",
+    "ct" : 500,
+    "effect" : "none",
+    "hue" : 65527,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 253,
+    "xy" : [ 0.6736, 0.3221 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:b4:87:43-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "Front Hall 3",
+  "state" : {
+    "alert" : "none",
+    "bri" : 200,
+    "colormode" : "xy",
+    "ct" : 500,
+    "effect" : "none",
+    "hue" : 65527,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 253,
+    "xy" : [ 0.6736, 0.3221 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:b4:88:38-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "Kitchen 1",
+  "state" : {
+    "alert" : "none",
+    "bri" : 150,
+    "colormode" : "hs",
+    "ct" : 500,
+    "effect" : "none",
+    "hue" : 8191,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 213,
+    "xy" : [ 0.5561, 0.3834 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:b4:cd:2f-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "Kitchen 2",
+  "state" : {
+    "alert" : "none",
+    "bri" : 150,
+    "colormode" : "hs",
+    "ct" : 500,
+    "effect" : "none",
+    "hue" : 8191,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 213,
+    "xy" : [ 0.5561, 0.3834 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:b4:ce:af-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "Kitchen 3",
+  "state" : {
+    "alert" : "none",
+    "bri" : 254,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 15835,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 94,
+    "xy" : [ 0.4285, 0.4014 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:b4:d2:93-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "Kitchen 4",
+  "state" : {
+    "alert" : "none",
+    "bri" : 254,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 15835,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 94,
+    "xy" : [ 0.4285, 0.4014 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:b4:f4:87-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "LR - Floor 1",
+  "state" : {
+    "alert" : "none",
+    "bri" : 254,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 15835,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 94,
+    "xy" : [ 0.4285, 0.4014 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:b8:0c:2a-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "LR - Floor 2",
+  "state" : {
+    "alert" : "none",
+    "bri" : 254,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 15835,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 94,
+    "xy" : [ 0.4285, 0.4014 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:b4:b0:68-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "LR - Floor 3",
+  "state" : {
+    "alert" : "none",
+    "bri" : 254,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 15835,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 94,
+    "xy" : [ 0.4285, 0.4014 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:b4:eb:3f-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LST001",
+  "name" : "TV Light Strip",
+  "state" : {
+    "alert" : "none",
+    "bri" : 200,
+    "colormode" : "xy",
+    "effect" : "none",
+    "hue" : 54291,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 254,
+    "xy" : [ 0.3597, 0.1593 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Color light",
+  "uniqueid" : "00:17:88:01:00:cf:20:90-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "LR - Table Left",
+  "state" : {
+    "alert" : "none",
+    "bri" : 200,
+    "colormode" : "xy",
+    "ct" : 220,
+    "effect" : "none",
+    "hue" : 54105,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 239,
+    "xy" : [ 0.3612, 0.1607 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:b4:ec:fe-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "LR - Table Right",
+  "state" : {
+    "alert" : "none",
+    "bri" : 200,
+    "colormode" : "xy",
+    "ct" : 153,
+    "effect" : "none",
+    "hue" : 50722,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 241,
+    "xy" : [ 0.2726, 0.1098 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:bc:4f:6d-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LST001",
+  "name" : "Strip - Counter",
+  "state" : {
+    "alert" : "none",
+    "bri" : 200,
+    "colormode" : "xy",
+    "effect" : "none",
+    "hue" : 2835,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 142,
+    "xy" : [ 0.5715, 0.3567 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Color light",
+  "uniqueid" : "00:17:88:01:00:cf:20:8c-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LST001",
+  "name" : "Strip - Bed",
+  "state" : {
+    "alert" : "none",
+    "bri" : 1,
+    "colormode" : "xy",
+    "effect" : "none",
+    "hue" : 7033,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 239,
+    "xy" : [ 0.6122, 0.3714 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Color light",
+  "uniqueid" : "00:17:88:01:00:cc:92:6f-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT001",
+  "name" : "Bed Side",
+  "state" : {
+    "alert" : "none",
+    "bri" : 1,
+    "colormode" : "xy",
+    "ct" : 153,
+    "effect" : "none",
+    "hue" : 5831,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 252,
+    "xy" : [ 0.6126, 0.3667 ]
+  },
+  "swversion" : "5.50.1.19085",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:00:dd:ae:ce-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LLC011",
+  "name" : "Kitchen (Bloom)",
+  "state" : {
+    "alert" : "none",
+    "bri" : 254,
+    "colormode" : "xy",
+    "effect" : "none",
+    "hue" : 51824,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 243,
+    "xy" : [ 0.2702, 0.1368 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Color light",
+  "uniqueid" : "00:17:88:01:00:c5:27:25-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LST002",
+  "name" : "LR Light Strip",
+  "state" : {
+    "alert" : "none",
+    "bri" : 254,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 8845,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 93,
+    "xy" : [ 0.4283, 0.4013 ]
+  },
+  "swversion" : "5.50.2.19072",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:01:1a:ac:ca-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LST002",
+  "name" : "BR Light Strip",
+  "state" : {
+    "alert" : "none",
+    "bri" : 1,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 8845,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 93,
+    "xy" : [ 0.4283, 0.4013 ]
+  },
+  "swversion" : "5.50.2.19072",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:01:1a:ad:32-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT007",
+  "name" : "Bedroom - Floor 1",
+  "state" : {
+    "alert" : "none",
+    "bri" : 1,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 15835,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 94,
+    "xy" : [ 0.4285, 0.4014 ]
+  },
+  "swversion" : "5.50.1.19085",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:10:3b:c3:0a-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT007",
+  "name" : "Bedroom - Floor 2",
+  "state" : {
+    "alert" : "none",
+    "bri" : 1,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 15835,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 94,
+    "xy" : [ 0.4285, 0.4014 ]
+  },
+  "swversion" : "5.50.1.19085",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:10:54:73:03-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LCT007",
+  "name" : "LR - Accent",
+  "state" : {
+    "alert" : "none",
+    "bri" : 100,
+    "colormode" : "xy",
+    "ct" : 153,
+    "effect" : "none",
+    "hue" : 50722,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 241,
+    "xy" : [ 0.2726, 0.1098 ]
+  },
+  "swversion" : "5.50.1.19085",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:10:41:1b:e6-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LST002",
+  "name" : "Kitchen - Above Stove",
+  "state" : {
+    "alert" : "none",
+    "bri" : 50,
+    "colormode" : "xy",
+    "ct" : 153,
+    "effect" : "none",
+    "hue" : 36968,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 242,
+    "xy" : [ 0.1715, 0.3561 ]
+  },
+  "swversion" : "5.50.2.19072",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:01:1b:8c:be-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LST002",
+  "name" : "Bathroom - Mirror",
+  "state" : {
+    "alert" : "none",
+    "bri" : 254,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 8845,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 93,
+    "xy" : [ 0.4283, 0.4013 ]
+  },
+  "swversion" : "5.50.2.19072",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:01:1b:87:5f-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LST002",
+  "name" : "Bathroom - Outer",
+  "state" : {
+    "alert" : "none",
+    "bri" : 254,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 8845,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 93,
+    "xy" : [ 0.4283, 0.4013 ]
+  },
+  "swversion" : "5.50.2.19072",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:01:1b:86:92-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LST002",
+  "name" : "Bathroom - Inner",
+  "state" : {
+    "alert" : "none",
+    "bri" : 254,
+    "colormode" : "xy",
+    "ct" : 319,
+    "effect" : "none",
+    "hue" : 8845,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 93,
+    "xy" : [ 0.4283, 0.4013 ]
+  },
+  "swversion" : "5.50.2.19072",
+  "type" : "Extended color light",
+  "uniqueid" : "00:17:88:01:01:1a:d4:ad-0b"
+}, {
+  "manufacturername" : "Philips",
+  "modelid" : "LLC010",
+  "name" : "Hue iris 1",
+  "state" : {
+    "alert" : "none",
+    "bri" : 216,
+    "colormode" : "xy",
+    "effect" : "none",
+    "hue" : 54291,
+    "on" : false,
+    "reachable" : true,
+    "sat" : 254,
+    "xy" : [ 0.3597, 0.1593 ]
+  },
+  "swversion" : "5.23.1.13452",
+  "type" : "Color light",
+  "uniqueid" : "00:17:88:01:00:0c:82:5b-0b"
+} ]

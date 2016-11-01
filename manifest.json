@@ -1,0 +1,6 @@
+{
+  "name": "HueEditor",
+  "short_name": "HueEditor",
+  "start_url": "/",
+  "display": "standalone"
+}

@@ -1,0 +1,8 @@
+*~
+*.pyc
+.DS_Store
+node_modules/*
+bower_components/*
+keys.js
+
+
